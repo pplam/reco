@@ -1,0 +1,16 @@
+{
+  "name": "dbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "baidu-aip-sdk": "^1.4.0",
+    "request": "^2.83.0",
+    "web3": "^0.19.1"
+  }
+}

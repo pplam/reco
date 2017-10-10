@@ -1,0 +1,14 @@
+{
+  "account": {
+    "address": "0xeae971482a42c0f93f9b579415dedd32794d8f45",
+    "password": "123456"
+  },
+  "AI": {
+    "APP_ID": "10214119",
+    "API_KEY": "VxWQzDyuUzmVDcytcLy8jCSh",
+    "SECRET_KEY": "3KRBzUy5AcGRGOkssqgGgfO7OkKcj2XP"
+  },
+  "cost": {
+    "gas": 90000
+  }
+}
