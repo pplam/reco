@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js plantDetect ../test_data/1.jpeg"
+    "test": "node index.js plantDetect http://imgs.soufun.com/news/2015_06/17/esf/1434507924802_000.jpg"
   },
   "author": "",
   "license": "ISC",

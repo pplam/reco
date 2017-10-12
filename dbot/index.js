@@ -1,5 +1,6 @@
 const fs = require('fs')
 const Web3 = require('web3')
+const rp = require('request-promise')
 const ImageClassifyClient = require("baidu-aip-sdk").imageClassify
 
 const config = require('./config')
@@ -43,8 +44,8 @@ module.exports = async () => {
       params
     } = JSON.parse(msg.args.question)
 
-    const base64Image = fs.readFileSync(params.image).toString('base64')
-    const result = await query(method, base64Image, params.options)
+    const image = await fetchImage(params.image)
+    const result = await query(method, image, params.options)
 
     const { account } = customer
     web3.personal
@@ -55,6 +56,16 @@ module.exports = async () => {
       gas: customer.cost.gas
     })
   })
+}
+
+async function fetchImage(url) {
+  const opts = {
+    url,
+    encoding: null
+  }
+
+  return rp.get(opts)
+    .then(img => Buffer.from(img, 'utf8').toString('base64'))
 }
 
 async function query(method, image, options) {
